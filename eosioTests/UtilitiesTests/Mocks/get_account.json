@@ -1,0 +1,100 @@
+{
+    "account_name": "wombatresmgr",
+    "head_block_num": 238458768,
+    "head_block_time": "2022-03-27T16:00:32.500",
+    "privileged": false,
+    "last_code_update": "1970-01-01T00:00:00.000",
+    "created": "2019-11-06T10:05:31.000",
+    "core_liquid_balance": "11.1078 EOS",
+    "ram_quota": 375195,
+    "net_weight": 39897350,
+    "cpu_weight": "280900690521",
+    "net_limit": {
+        "used": 3656020,
+        "available": 71302432,
+        "max": 74958452
+    },
+    "cpu_limit": {
+        "used": 18794364,
+        "available": 6493108,
+        "max": 25287472
+    },
+    "ram_usage": 3782,
+    "permissions": [
+        {
+            "perm_name": "active",
+            "parent": "owner",
+            "required_auth": {
+                "threshold": 1,
+                "keys": [
+                    {
+                        "key": "EOS8JEsx2v4ztAXXPf9SB1XvWpm6v9syk8ou78mqSazxgKjxZ723s",
+                        "weight": 1
+                    }
+                ],
+                "accounts": [],
+                "waits": []
+            }
+        },
+        {
+            "perm_name": "cosign",
+            "parent": "active",
+            "required_auth": {
+                "threshold": 1,
+                "keys": [
+                    {
+                        "key": "EOS6wK74NhZ2CwLheYsQGeJmkTJtvpE2SJm68ji9TZtPNbFDdGZ1S",
+                        "weight": 1
+                    }
+                ],
+                "accounts": [
+                    {
+                        "permission": {
+                            "actor": "chainclashhq",
+                            "permission": "active"
+                        },
+                        "weight": 1
+                    },
+                    {
+                        "permission": {
+                            "actor": "trialclashhq",
+                            "permission": "active"
+                        },
+                        "weight": 1
+                    }
+                ],
+                "waits": []
+            }
+        },
+        {
+            "perm_name": "owner",
+            "parent": "",
+            "required_auth": {
+                "threshold": 1,
+                "keys": [
+                    {
+                        "key": "EOS7i3nbEJHu6zpbW1dxCBnNMN6eZJQ2MDRam1XvFFTJebYVtuedy",
+                        "weight": 1
+                    }
+                ],
+                "accounts": [],
+                "waits": []
+            }
+        }
+    ],
+    "total_resources": {
+        "owner": "wombatresmgr",
+        "net_weight": "3989.7350 EOS",
+        "cpu_weight": "28090069.0521 EOS",
+        "ram_bytes": 373795
+    },
+    "self_delegated_bandwidth": null,
+    "refund_request": null,
+    "voter_info": null,
+    "rex_info": null,
+    "subjective_cpu_bill_limit": {
+        "used": 130793,
+        "available": 0,
+        "max": 0
+    }
+}

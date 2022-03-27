@@ -10,7 +10,6 @@
 		B1D8F6F327F05E7A00C13969 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8F6F227F05E7A00C13969 /* AppDelegate.swift */; };
 		B1D8F6FC27F05E7C00C13969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1D8F6FB27F05E7C00C13969 /* Assets.xcassets */; };
 		B1D8F6FF27F05E7C00C13969 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D8F6FD27F05E7C00C13969 /* LaunchScreen.storyboard */; };
-		B1D8F70A27F05E7C00C13969 /* eosioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8F70927F05E7C00C13969 /* eosioTests.swift */; };
 		B1D8F71427F05E7C00C13969 /* eosioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8F71327F05E7C00C13969 /* eosioUITests.swift */; };
 		B1D8F71627F05E7C00C13969 /* eosioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8F71527F05E7C00C13969 /* eosioUITestsLaunchTests.swift */; };
 		B1FF825B27F07004001EFE96 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF825A27F07004001EFE96 /* AppCoordinator.swift */; };
@@ -31,6 +30,15 @@
 		B1FF828727F089CE001EFE96 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1FF828627F089CE001EFE96 /* Account.storyboard */; };
 		B1FF828927F089DC001EFE96 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF828827F089DC001EFE96 /* AccountViewController.swift */; };
 		B1FF828C27F09EFE001EFE96 /* String+RegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF828B27F09EFE001EFE96 /* String+RegEx.swift */; };
+		B1FF829227F0C81A001EFE96 /* get_account.json in Resources */ = {isa = PBXBuildFile; fileRef = B1FF829127F0C81A001EFE96 /* get_account.json */; };
+		B1FF829427F0C84A001EFE96 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF829327F0C84A001EFE96 /* URLSessionMock.swift */; };
+		B1FF829627F0C862001EFE96 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF829527F0C862001EFE96 /* URLSessionDataTaskMock.swift */; };
+		B1FF829827F0C879001EFE96 /* RequestManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF829727F0C879001EFE96 /* RequestManagerMock.swift */; };
+		B1FF829A27F0C8A1001EFE96 /* MockResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF829927F0C8A1001EFE96 /* MockResponseValidator.swift */; };
+		B1FF829C27F0C8BB001EFE96 /* UnitTestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF829B27F0C8BB001EFE96 /* UnitTestError.swift */; };
+		B1FF829E27F0C92C001EFE96 /* AppCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF829D27F0C92C001EFE96 /* AppCoordinatorTest.swift */; };
+		B1FF82A027F0C999001EFE96 /* Test_NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF829F27F0C999001EFE96 /* Test_NetworkConnection.swift */; };
+		B1FF82A227F0CA1C001EFE96 /* Test_AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF82A127F0CA1C001EFE96 /* Test_AccountService.swift */; };
 		FE4854CC90C7FBBA4EF8AFC9 /* Pods_eosio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669F496402E6B814AB9178D8 /* Pods_eosio.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +68,6 @@
 		B1D8F6FE27F05E7C00C13969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1D8F70027F05E7C00C13969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1D8F70527F05E7C00C13969 /* eosioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eosioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1D8F70927F05E7C00C13969 /* eosioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eosioTests.swift; sourceTree = "<group>"; };
 		B1D8F70F27F05E7C00C13969 /* eosioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eosioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D8F71327F05E7C00C13969 /* eosioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eosioUITests.swift; sourceTree = "<group>"; };
 		B1D8F71527F05E7C00C13969 /* eosioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eosioUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -82,6 +89,15 @@
 		B1FF828627F089CE001EFE96 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		B1FF828827F089DC001EFE96 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		B1FF828B27F09EFE001EFE96 /* String+RegEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RegEx.swift"; sourceTree = "<group>"; };
+		B1FF829127F0C81A001EFE96 /* get_account.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = get_account.json; sourceTree = "<group>"; };
+		B1FF829327F0C84A001EFE96 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		B1FF829527F0C862001EFE96 /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
+		B1FF829727F0C879001EFE96 /* RequestManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerMock.swift; sourceTree = "<group>"; };
+		B1FF829927F0C8A1001EFE96 /* MockResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResponseValidator.swift; sourceTree = "<group>"; };
+		B1FF829B27F0C8BB001EFE96 /* UnitTestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestError.swift; sourceTree = "<group>"; };
+		B1FF829D27F0C92C001EFE96 /* AppCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTest.swift; sourceTree = "<group>"; };
+		B1FF829F27F0C999001EFE96 /* Test_NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_NetworkConnection.swift; sourceTree = "<group>"; };
+		B1FF82A127F0CA1C001EFE96 /* Test_AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_AccountService.swift; sourceTree = "<group>"; };
 		B4CD2668AEDAFCACDB62DD18 /* Pods-eosio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosio.release.xcconfig"; path = "Target Support Files/Pods-eosio/Pods-eosio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,7 +181,9 @@
 		B1D8F70827F05E7C00C13969 /* eosioTests */ = {
 			isa = PBXGroup;
 			children = (
-				B1D8F70927F05E7C00C13969 /* eosioTests.swift */,
+				B1FF828F27F0C7B0001EFE96 /* Coordinator */,
+				B1FF828D27F0C772001EFE96 /* TestAccountScene */,
+				B1FF828E27F0C783001EFE96 /* UtilitiesTests */,
 			);
 			path = eosioTests;
 			sourceTree = "<group>";
@@ -324,6 +342,44 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		B1FF828D27F0C772001EFE96 /* TestAccountScene */ = {
+			isa = PBXGroup;
+			children = (
+				B1FF829F27F0C999001EFE96 /* Test_NetworkConnection.swift */,
+				B1FF82A127F0CA1C001EFE96 /* Test_AccountService.swift */,
+			);
+			path = TestAccountScene;
+			sourceTree = "<group>";
+		};
+		B1FF828E27F0C783001EFE96 /* UtilitiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1FF829027F0C801001EFE96 /* Mocks */,
+				B1FF829B27F0C8BB001EFE96 /* UnitTestError.swift */,
+			);
+			path = UtilitiesTests;
+			sourceTree = "<group>";
+		};
+		B1FF828F27F0C7B0001EFE96 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B1FF829D27F0C92C001EFE96 /* AppCoordinatorTest.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B1FF829027F0C801001EFE96 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B1FF829127F0C81A001EFE96 /* get_account.json */,
+				B1FF829327F0C84A001EFE96 /* URLSessionMock.swift */,
+				B1FF829527F0C862001EFE96 /* URLSessionDataTaskMock.swift */,
+				B1FF829727F0C879001EFE96 /* RequestManagerMock.swift */,
+				B1FF829927F0C8A1001EFE96 /* MockResponseValidator.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -440,6 +496,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1FF829227F0C81A001EFE96 /* get_account.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,7 +581,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1D8F70A27F05E7C00C13969 /* eosioTests.swift in Sources */,
+				B1FF829C27F0C8BB001EFE96 /* UnitTestError.swift in Sources */,
+				B1FF82A227F0CA1C001EFE96 /* Test_AccountService.swift in Sources */,
+				B1FF829427F0C84A001EFE96 /* URLSessionMock.swift in Sources */,
+				B1FF829827F0C879001EFE96 /* RequestManagerMock.swift in Sources */,
+				B1FF829A27F0C8A1001EFE96 /* MockResponseValidator.swift in Sources */,
+				B1FF82A027F0C999001EFE96 /* Test_NetworkConnection.swift in Sources */,
+				B1FF829E27F0C92C001EFE96 /* AppCoordinatorTest.swift in Sources */,
+				B1FF829627F0C862001EFE96 /* URLSessionDataTaskMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
