@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B1D8F6F327F05E7A00C13969 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8F6F227F05E7A00C13969 /* AppDelegate.swift */; };
-		B1D8F6F527F05E7A00C13969 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8F6F427F05E7A00C13969 /* SceneDelegate.swift */; };
-		B1D8F6F727F05E7A00C13969 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8F6F627F05E7A00C13969 /* ViewController.swift */; };
-		B1D8F6FA27F05E7A00C13969 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D8F6F827F05E7A00C13969 /* Main.storyboard */; };
 		B1D8F6FC27F05E7C00C13969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1D8F6FB27F05E7C00C13969 /* Assets.xcassets */; };
 		B1D8F6FF27F05E7C00C13969 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D8F6FD27F05E7C00C13969 /* LaunchScreen.storyboard */; };
 		B1D8F70A27F05E7C00C13969 /* eosioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8F70927F05E7C00C13969 /* eosioTests.swift */; };
 		B1D8F71427F05E7C00C13969 /* eosioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8F71327F05E7C00C13969 /* eosioUITests.swift */; };
 		B1D8F71627F05E7C00C13969 /* eosioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D8F71527F05E7C00C13969 /* eosioUITestsLaunchTests.swift */; };
+		B1FF825B27F07004001EFE96 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF825A27F07004001EFE96 /* AppCoordinator.swift */; };
 		FE4854CC90C7FBBA4EF8AFC9 /* Pods_eosio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669F496402E6B814AB9178D8 /* Pods_eosio.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,9 +39,6 @@
 		669F496402E6B814AB9178D8 /* Pods_eosio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eosio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D8F6EF27F05E7A00C13969 /* eosio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eosio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D8F6F227F05E7A00C13969 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B1D8F6F427F05E7A00C13969 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B1D8F6F627F05E7A00C13969 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B1D8F6F927F05E7A00C13969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1D8F6FB27F05E7C00C13969 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1D8F6FE27F05E7C00C13969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1D8F70027F05E7C00C13969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +47,7 @@
 		B1D8F70F27F05E7C00C13969 /* eosioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eosioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D8F71327F05E7C00C13969 /* eosioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eosioUITests.swift; sourceTree = "<group>"; };
 		B1D8F71527F05E7C00C13969 /* eosioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eosioUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B1FF825A27F07004001EFE96 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B4CD2668AEDAFCACDB62DD18 /* Pods-eosio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosio.release.xcconfig"; path = "Target Support Files/Pods-eosio/Pods-eosio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +83,6 @@
 				35E1C91DB152D4B99055D065 /* Pods-eosio.debug.xcconfig */,
 				B4CD2668AEDAFCACDB62DD18 /* Pods-eosio.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -124,13 +119,11 @@
 		B1D8F6F127F05E7A00C13969 /* eosio */ = {
 			isa = PBXGroup;
 			children = (
-				B1D8F6F227F05E7A00C13969 /* AppDelegate.swift */,
-				B1D8F6F427F05E7A00C13969 /* SceneDelegate.swift */,
-				B1D8F6F627F05E7A00C13969 /* ViewController.swift */,
-				B1D8F6F827F05E7A00C13969 /* Main.storyboard */,
-				B1D8F6FB27F05E7C00C13969 /* Assets.xcassets */,
-				B1D8F6FD27F05E7C00C13969 /* LaunchScreen.storyboard */,
-				B1D8F70027F05E7C00C13969 /* Info.plist */,
+				B1D8F72227F06C6F00C13969 /* App */,
+				B1D8F72327F06C7F00C13969 /* AccountDisplay */,
+				B1D8F72427F06CA000C13969 /* Utilities */,
+				B1D8F72527F06CA500C13969 /* UIKit Utilities */,
+				B1D8F72627F06CB800C13969 /* Supporting Files */,
 			);
 			path = eosio;
 			sourceTree = "<group>";
@@ -150,6 +143,54 @@
 				B1D8F71527F05E7C00C13969 /* eosioUITestsLaunchTests.swift */,
 			);
 			path = eosioUITests;
+			sourceTree = "<group>";
+		};
+		B1D8F72227F06C6F00C13969 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B1D8F6F227F05E7A00C13969 /* AppDelegate.swift */,
+				B1FF825A27F07004001EFE96 /* AppCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B1D8F72327F06C7F00C13969 /* AccountDisplay */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AccountDisplay;
+			sourceTree = "<group>";
+		};
+		B1D8F72427F06CA000C13969 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B1FF825D27F0704E001EFE96 /* Network */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B1D8F72527F06CA500C13969 /* UIKit Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UIKit Utilities";
+			sourceTree = "<group>";
+		};
+		B1D8F72627F06CB800C13969 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1D8F6FB27F05E7C00C13969 /* Assets.xcassets */,
+				B1D8F6FD27F05E7C00C13969 /* LaunchScreen.storyboard */,
+				B1D8F70027F05E7C00C13969 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B1FF825D27F0704E001EFE96 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +301,6 @@
 			files = (
 				B1D8F6FF27F05E7C00C13969 /* LaunchScreen.storyboard in Resources */,
 				B1D8F6FC27F05E7C00C13969 /* Assets.xcassets in Resources */,
-				B1D8F6FA27F05E7A00C13969 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,9 +367,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1D8F6F727F05E7A00C13969 /* ViewController.swift in Sources */,
+				B1FF825B27F07004001EFE96 /* AppCoordinator.swift in Sources */,
 				B1D8F6F327F05E7A00C13969 /* AppDelegate.swift in Sources */,
-				B1D8F6F527F05E7A00C13969 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,14 +405,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B1D8F6F827F05E7A00C13969 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B1D8F6F927F05E7A00C13969 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B1D8F6FD27F05E7C00C13969 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -509,7 +540,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 98S6H2H248;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = eosio/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/eosio/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -539,7 +570,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 98S6H2H248;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = eosio/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/eosio/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
