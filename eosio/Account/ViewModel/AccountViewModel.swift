@@ -47,8 +47,10 @@ final class AccountViewModel {
             self.loading.onNext(false)
             switch result {
             case .success(let account):
+                self.accountNameWith(account.accountName ?? "-")
                 self.getTotalBalanceWith(account.coreLiquidBalance ?? "-")
                 self.calculateCpuLimitWith(account.cpuLimit)
+                self.calculateNetLimitWith(account.netLimit)
             case.failure(let requestError):
                 self.errorResponse.onNext(.networkError(requestError))
             }
@@ -63,6 +65,11 @@ final class AccountViewModel {
                 self.errorResponse.onNext(.notValidAccountName)
             }
         }
+    }
+    
+    public let accountName: PublishSubject<String> = PublishSubject()
+    func accountNameWith(_ name: String) {
+        accountName.onNext(name)
     }
     
     public let totalBalance: PublishSubject<String> = PublishSubject()
@@ -81,6 +88,20 @@ final class AccountViewModel {
         } else {
             let ms = cpuUsage / 1_000_000
             cpuLimit.onNext(String(format: "%.2f", ms) + " s")
+        }
+    }
+    
+    public let netLimit: PublishSubject<String> = PublishSubject()
+    func calculateNetLimitWith(_ limit: Limit?) {
+        guard let netUsage = limit?.used else { return }
+        if 0...1024 ~= netUsage {
+            netLimit.onNext("\(netUsage) B")
+        } else if 1025...1_048_576 ~= netUsage {
+            let kb = netUsage / 1000
+            netLimit.onNext(String(format: "%.2f", kb) + " KB")
+        } else {
+            let ms = netUsage / 1_000_000
+            netLimit.onNext(String(format: "%.2f", ms) + " MB")
         }
     }
 }

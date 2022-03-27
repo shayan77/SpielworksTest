@@ -13,8 +13,10 @@ final class AccountViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var accountNameTextField: UITextField!
+    @IBOutlet weak var accountNameLabel: UILabel!
     @IBOutlet weak var totalBalanceLabel: UILabel!
     @IBOutlet weak var cpuUsageLabel: UILabel!
+    @IBOutlet weak var netUsageLabel: UILabel!
     
     weak var coordinator: AppCoordinator?
     
@@ -52,6 +54,13 @@ final class AccountViewController: UIViewController, Storyboarded {
             .bind(to: accountNameTextField.rx.isUserInteractionEnabled)
             .disposed(by: disposeBag)
         
+        accountViewModel.accountName
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] name in
+                guard let self = self else { return }
+                self.accountNameLabel.text = name
+            }).disposed(by: disposeBag)
+        
         accountViewModel.totalBalance
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] balance in
@@ -64,6 +73,13 @@ final class AccountViewController: UIViewController, Storyboarded {
             .subscribe(onNext: { [weak self] cpuUsage in
                 guard let self = self else { return }
                 self.cpuUsageLabel.text = cpuUsage
+            }).disposed(by: disposeBag)
+        
+        accountViewModel.netLimit
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] netUsage in
+                guard let self = self else { return }
+                self.netUsageLabel.text = netUsage
             }).disposed(by: disposeBag)
         
         accountViewModel.errorResponse
