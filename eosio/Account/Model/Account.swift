@@ -14,9 +14,9 @@ struct Account: Codable {
     let headBlockTime: String?
     let privileged: Bool?
     let lastCodeUpdate, created, coreLiquidBalance: String?
-    let ramQuota: Int?
+    let ramQuota: Double?
     let netLimit, cpuLimit: Limit?
-    let ramUsage: Int?
+    let ramUsage: Double?
     let permissions: [PermissionElement]?
     let totalResources: TotalResources?
     let selfDelegatedBandwidth: SelfDelegatedBandwidth?

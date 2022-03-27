@@ -51,6 +51,7 @@ final class AccountViewModel {
                 self.getTotalBalanceWith(account.coreLiquidBalance ?? "-")
                 self.calculateCpuLimitWith(account.cpuLimit)
                 self.calculateNetLimitWith(account.netLimit)
+                self.calculateRamLimitWith(account.ramUsage, total: account.ramQuota)
             case.failure(let requestError):
                 self.errorResponse.onNext(.networkError(requestError))
             }
@@ -103,5 +104,34 @@ final class AccountViewModel {
             let ms = netUsage / 1_000_000
             netLimit.onNext(String(format: "%.2f", ms) + " MB")
         }
+    }
+    
+    public let ramLimit: PublishSubject<String> = PublishSubject()
+    func calculateRamLimitWith(_ usage: Double?, total: Double?) {
+        guard let ramUsage = usage else { return }
+        var ramUsageString = ""
+        if 0...1024 ~= ramUsage {
+            ramUsageString = "\(ramUsage) B"
+        } else if 1025...1_048_576 ~= ramUsage {
+            let kb = ramUsage / 1000
+            ramUsageString = String(format: "%.2f", kb) + " KB"
+        } else {
+            let ms = ramUsage / 1_000_000
+            ramUsageString = String(format: "%.2f", ms) + " MB"
+        }
+        
+        guard let totamRam = total else { return }
+        var totalRamString = ""
+        if 0...1024 ~= totamRam {
+            totalRamString = "\(totamRam) B"
+        } else if 1025...1_048_576 ~= totamRam {
+            let kb = totamRam / 1000
+            totalRamString = String(format: "%.2f", kb) + " KB"
+        } else {
+            let ms = totamRam / 1_000_000
+            totalRamString = String(format: "%.2f", ms) + " MB"
+        }
+        
+        ramLimit.onNext("\(ramUsageString) / \(totalRamString)")
     }
 }

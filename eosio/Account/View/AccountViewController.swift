@@ -17,6 +17,7 @@ final class AccountViewController: UIViewController, Storyboarded {
     @IBOutlet weak var totalBalanceLabel: UILabel!
     @IBOutlet weak var cpuUsageLabel: UILabel!
     @IBOutlet weak var netUsageLabel: UILabel!
+    @IBOutlet weak var ramUsageLabel: UILabel!
     
     weak var coordinator: AppCoordinator?
     
@@ -80,6 +81,13 @@ final class AccountViewController: UIViewController, Storyboarded {
             .subscribe(onNext: { [weak self] netUsage in
                 guard let self = self else { return }
                 self.netUsageLabel.text = netUsage
+            }).disposed(by: disposeBag)
+        
+        accountViewModel.ramLimit
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] ramUsage in
+                guard let self = self else { return }
+                self.ramUsageLabel.text = ramUsage
             }).disposed(by: disposeBag)
         
         accountViewModel.errorResponse

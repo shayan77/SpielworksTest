@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qVt-VL-CvH">
-                                <rect key="frame" x="20" y="252.5" width="374" height="133.5"/>
+                                <rect key="frame" x="20" y="252.5" width="374" height="170"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JsT-ry-gqZ">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
@@ -110,6 +110,23 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KPb-9M-GJp">
+                                        <rect key="frame" x="0.0" y="149.5" width="374" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RAM:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNH-ad-8ZW">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BZ-Gi-V7V">
+                                                <rect key="frame" x="187" y="0.0" width="187" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemGreenColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -138,6 +155,7 @@
                         <outlet property="activityIndicator" destination="2hQ-XY-Z1d" id="4PJ-y7-xTY"/>
                         <outlet property="cpuUsageLabel" destination="r6E-HH-K4O" id="5LG-Qw-609"/>
                         <outlet property="netUsageLabel" destination="sUx-cM-ayz" id="ZSX-MP-h3Y"/>
+                        <outlet property="ramUsageLabel" destination="0BZ-Gi-V7V" id="0uE-Gt-wEX"/>
                         <outlet property="totalBalanceLabel" destination="Pxq-FM-qnx" id="mFr-tR-BnA"/>
                     </connections>
                 </viewController>
@@ -149,6 +167,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
