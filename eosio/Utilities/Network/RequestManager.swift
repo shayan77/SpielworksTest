@@ -16,7 +16,7 @@ typealias CodableResponse<T: Codable> = (Result<T, RequestError>) -> Void
 
 final class RequestManager: NSObject, URLSessionDelegate {
     
-    //var baseApi: String = "http://localhost:8000"
+    var baseApi: String = "https://eos.greymass.com/v1/chain/"
     
     var session: URLSession!
     
@@ -66,10 +66,10 @@ extension RequestManager: RequestManagerProtocol {
     
     private func urlRequestBuilder(url: String, header: Headers, httpMethod: HTTPMethod) -> URLRequest {
         
-        var urlRequest = URLRequest(url: URL(string: url)!, cachePolicy: .useProtocolCachePolicy, timeoutInterval: timeOutInterval)
+        var urlRequest = URLRequest(url: URL(string: baseApi + url)!, cachePolicy: .useProtocolCachePolicy, timeoutInterval: timeOutInterval)
         urlRequest.allHTTPHeaderFields = header
         
-        urlRequest.httpMethod = httpMethod.rawValue
+        urlRequest.httpMethod = httpMethod.name
         
         return urlRequest
     }

@@ -33,8 +33,8 @@ final class AppCoordinator: NSObject, Coordinator {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         
-        let counterVC = CounterViewController.instantiate(coordinator: self)
-        navigationController.pushViewController(counterVC, animated: true)
+        let accountVC = AccountViewController.instantiate(coordinator: self)
+        navigationController.pushViewController(accountVC, animated: true)
     }
 }
 

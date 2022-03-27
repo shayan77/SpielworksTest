@@ -23,6 +23,13 @@
 		B1FF827027F07183001EFE96 /* ResponseValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF826F27F07183001EFE96 /* ResponseValidatorProtocol.swift */; };
 		B1FF827227F0718C001EFE96 /* ResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF827127F0718C001EFE96 /* ResponseValidator.swift */; };
 		B1FF827427F0722C001EFE96 /* NotFoundErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF827327F0722C001EFE96 /* NotFoundErrorModel.swift */; };
+		B1FF827927F07596001EFE96 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF827827F07596001EFE96 /* Coordinator.swift */; };
+		B1FF827B27F075A2001EFE96 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF827A27F075A2001EFE96 /* Storyboarded.swift */; };
+		B1FF828127F07664001EFE96 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF828027F07664001EFE96 /* AccountService.swift */; };
+		B1FF828327F07677001EFE96 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF828227F07677001EFE96 /* Account.swift */; };
+		B1FF828527F08885001EFE96 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF828427F08885001EFE96 /* AccountViewModel.swift */; };
+		B1FF828727F089CE001EFE96 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1FF828627F089CE001EFE96 /* Account.storyboard */; };
+		B1FF828927F089DC001EFE96 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF828827F089DC001EFE96 /* AccountViewController.swift */; };
 		FE4854CC90C7FBBA4EF8AFC9 /* Pods_eosio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669F496402E6B814AB9178D8 /* Pods_eosio.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +73,13 @@
 		B1FF826F27F07183001EFE96 /* ResponseValidatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidatorProtocol.swift; sourceTree = "<group>"; };
 		B1FF827127F0718C001EFE96 /* ResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidator.swift; sourceTree = "<group>"; };
 		B1FF827327F0722C001EFE96 /* NotFoundErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotFoundErrorModel.swift; sourceTree = "<group>"; };
+		B1FF827827F07596001EFE96 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B1FF827A27F075A2001EFE96 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		B1FF828027F07664001EFE96 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		B1FF828227F07677001EFE96 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		B1FF828427F08885001EFE96 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		B1FF828627F089CE001EFE96 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		B1FF828827F089DC001EFE96 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		B4CD2668AEDAFCACDB62DD18 /* Pods-eosio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosio.release.xcconfig"; path = "Target Support Files/Pods-eosio/Pods-eosio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				B1D8F72227F06C6F00C13969 /* App */,
-				B1D8F72327F06C7F00C13969 /* AccountDisplay */,
+				B1D8F72327F06C7F00C13969 /* Account */,
 				B1D8F72427F06CA000C13969 /* Utilities */,
 				B1D8F72527F06CA500C13969 /* UIKit Utilities */,
 				B1D8F72627F06CB800C13969 /* Supporting Files */,
@@ -172,12 +186,15 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		B1D8F72327F06C7F00C13969 /* AccountDisplay */ = {
+		B1D8F72327F06C7F00C13969 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				B1FF827C27F07615001EFE96 /* Service */,
 				B1FF827527F07233001EFE96 /* Model */,
+				B1FF827E27F07623001EFE96 /* View */,
+				B1FF827F27F07628001EFE96 /* ViewModel */,
 			);
-			path = AccountDisplay;
+			path = Account;
 			sourceTree = "<group>";
 		};
 		B1D8F72427F06CA000C13969 /* Utilities */ = {
@@ -191,6 +208,7 @@
 		B1D8F72527F06CA500C13969 /* UIKit Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B1FF827627F0757A001EFE96 /* Coordinator */,
 			);
 			path = "UIKit Utilities";
 			sourceTree = "<group>";
@@ -248,8 +266,51 @@
 			isa = PBXGroup;
 			children = (
 				B1FF827327F0722C001EFE96 /* NotFoundErrorModel.swift */,
+				B1FF828227F07677001EFE96 /* Account.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B1FF827627F0757A001EFE96 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B1FF827727F07588001EFE96 /* Protocols */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B1FF827727F07588001EFE96 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B1FF827827F07596001EFE96 /* Coordinator.swift */,
+				B1FF827A27F075A2001EFE96 /* Storyboarded.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B1FF827C27F07615001EFE96 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B1FF828027F07664001EFE96 /* AccountService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B1FF827E27F07623001EFE96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1FF828627F089CE001EFE96 /* Account.storyboard */,
+				B1FF828827F089DC001EFE96 /* AccountViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B1FF827F27F07628001EFE96 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B1FF828427F08885001EFE96 /* AccountViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +421,7 @@
 			files = (
 				B1D8F6FF27F05E7C00C13969 /* LaunchScreen.storyboard in Resources */,
 				B1D8F6FC27F05E7C00C13969 /* Assets.xcassets in Resources */,
+				B1FF828727F089CE001EFE96 /* Account.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,10 +493,16 @@
 				B1FF826627F07125001EFE96 /* HTTPMethod.swift in Sources */,
 				B1FF825B27F07004001EFE96 /* AppCoordinator.swift in Sources */,
 				B1D8F6F327F05E7A00C13969 /* AppDelegate.swift in Sources */,
+				B1FF828327F07677001EFE96 /* Account.swift in Sources */,
+				B1FF827B27F075A2001EFE96 /* Storyboarded.swift in Sources */,
 				B1FF827227F0718C001EFE96 /* ResponseValidator.swift in Sources */,
+				B1FF828927F089DC001EFE96 /* AccountViewController.swift in Sources */,
 				B1FF827427F0722C001EFE96 /* NotFoundErrorModel.swift in Sources */,
 				B1FF827027F07183001EFE96 /* ResponseValidatorProtocol.swift in Sources */,
+				B1FF828527F08885001EFE96 /* AccountViewModel.swift in Sources */,
+				B1FF827927F07596001EFE96 /* Coordinator.swift in Sources */,
 				B1FF826E27F0716F001EFE96 /* ResponseLog.swift in Sources */,
+				B1FF828127F07664001EFE96 /* AccountService.swift in Sources */,
 				B1FF826427F07100001EFE96 /* RequestError.swift in Sources */,
 				B1FF826A27F0713D001EFE96 /* RequestManagerProtocol.swift in Sources */,
 			);
