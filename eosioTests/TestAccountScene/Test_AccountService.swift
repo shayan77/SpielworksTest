@@ -29,7 +29,7 @@ final class AccountServiceTests: XCTestCase {
         sut = nil
     }
     
-    func test_getApartmentsList() {
+    func test_getAccount() {
         
         // Given
         let urlSessionMock = URLSessionMock()
