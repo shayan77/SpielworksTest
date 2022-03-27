@@ -30,6 +30,7 @@
 		B1FF828527F08885001EFE96 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF828427F08885001EFE96 /* AccountViewModel.swift */; };
 		B1FF828727F089CE001EFE96 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1FF828627F089CE001EFE96 /* Account.storyboard */; };
 		B1FF828927F089DC001EFE96 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF828827F089DC001EFE96 /* AccountViewController.swift */; };
+		B1FF828C27F09EFE001EFE96 /* String+RegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF828B27F09EFE001EFE96 /* String+RegEx.swift */; };
 		FE4854CC90C7FBBA4EF8AFC9 /* Pods_eosio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669F496402E6B814AB9178D8 /* Pods_eosio.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		B1FF828427F08885001EFE96 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		B1FF828627F089CE001EFE96 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		B1FF828827F089DC001EFE96 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		B1FF828B27F09EFE001EFE96 /* String+RegEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RegEx.swift"; sourceTree = "<group>"; };
 		B4CD2668AEDAFCACDB62DD18 /* Pods-eosio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eosio.release.xcconfig"; path = "Target Support Files/Pods-eosio/Pods-eosio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,6 +210,7 @@
 		B1D8F72527F06CA500C13969 /* UIKit Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B1FF828A27F09EEC001EFE96 /* Extensions */,
 				B1FF827627F0757A001EFE96 /* Coordinator */,
 			);
 			path = "UIKit Utilities";
@@ -311,6 +314,14 @@
 				B1FF828427F08885001EFE96 /* AccountViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B1FF828A27F09EEC001EFE96 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B1FF828B27F09EFE001EFE96 /* String+RegEx.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -492,6 +503,7 @@
 				B1FF826C27F0714F001EFE96 /* URLRequestLoggableProtocol.swift in Sources */,
 				B1FF826627F07125001EFE96 /* HTTPMethod.swift in Sources */,
 				B1FF825B27F07004001EFE96 /* AppCoordinator.swift in Sources */,
+				B1FF828C27F09EFE001EFE96 /* String+RegEx.swift in Sources */,
 				B1D8F6F327F05E7A00C13969 /* AppDelegate.swift in Sources */,
 				B1FF828327F07677001EFE96 /* Account.swift in Sources */,
 				B1FF827B27F075A2001EFE96 /* Storyboarded.swift in Sources */,

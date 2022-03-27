@@ -13,14 +13,14 @@ final class AccountViewModel {
     enum AccountError {
         
         case networkError(RequestError)
-        case tooManyRequestError
+        case notValidAccountName
         
         var errorValue: String {
             switch self {
             case .networkError(let error):
                 return error.localizedDescription
-            case .tooManyRequestError:
-                return "Too Many Request"
+            case .notValidAccountName:
+                return "Account name is not valid"
             }
         }
     }
@@ -32,23 +32,40 @@ final class AccountViewModel {
         self.accountService = accountService
     }
     
-    public let successResponse: PublishSubject<Account> = PublishSubject()
     public let errorResponse: PublishSubject<AccountError> = PublishSubject()
+    public let loading: PublishSubject<Bool> = PublishSubject()
     
-    func getAccountWith(_ name: String) {
+    private func getAccountDataWith(_ name: String) {
         
         let parameter: Parameters = [
             "account_name": name
         ]
         
+        loading.onNext(true)
         accountService.getAccount(parameters: parameter) { [weak self] result in
             guard let self = self else { return }
+            self.loading.onNext(false)
             switch result {
             case .success(let account):
-                self.successResponse.onNext(account)
+                self.getTotalBalanceWith(account.coreLiquidBalance ?? "-")
             case.failure(let requestError):
                 self.errorResponse.onNext(.networkError(requestError))
             }
         }
+    }
+    
+    func getAccountNameWith(_ name: String) {
+        if !name.isEmpty {
+            if name.isAccountValidate() {
+                self.getAccountDataWith(name)
+            } else {
+                self.errorResponse.onNext(.notValidAccountName)
+            }
+        }
+    }
+    
+    public let totalBalance: PublishSubject<String> = PublishSubject()
+    func getTotalBalanceWith(_ balance: String) {
+        totalBalance.onNext(balance)
     }
 }
