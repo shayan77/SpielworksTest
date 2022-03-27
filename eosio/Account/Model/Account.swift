@@ -14,7 +14,7 @@ struct Account: Codable {
     let headBlockTime: String?
     let privileged: Bool?
     let lastCodeUpdate, created, coreLiquidBalance: String?
-    let ramQuota, netWeight, cpuWeight: Int?
+    let ramQuota: Int?
     let netLimit, cpuLimit: Limit?
     let ramUsage: Int?
     let permissions: [PermissionElement]?
@@ -32,8 +32,6 @@ struct Account: Codable {
         case created
         case coreLiquidBalance = "core_liquid_balance"
         case ramQuota = "ram_quota"
-        case netWeight = "net_weight"
-        case cpuWeight = "cpu_weight"
         case netLimit = "net_limit"
         case cpuLimit = "cpu_limit"
         case ramUsage = "ram_usage"
@@ -47,7 +45,7 @@ struct Account: Codable {
 
 // MARK: - Limit
 struct Limit: Codable {
-    let used, available, max: Int?
+    let used, available, max: Double?
 }
 
 // MARK: - PermissionElement

@@ -48,6 +48,7 @@ final class AccountViewModel {
             switch result {
             case .success(let account):
                 self.getTotalBalanceWith(account.coreLiquidBalance ?? "-")
+                self.calculateCpuLimitWith(account.cpuLimit)
             case.failure(let requestError):
                 self.errorResponse.onNext(.networkError(requestError))
             }
@@ -67,5 +68,19 @@ final class AccountViewModel {
     public let totalBalance: PublishSubject<String> = PublishSubject()
     func getTotalBalanceWith(_ balance: String) {
         totalBalance.onNext(balance)
+    }
+    
+    public let cpuLimit: PublishSubject<String> = PublishSubject()
+    func calculateCpuLimitWith(_ limit: Limit?) {
+        guard let cpuUsage = limit?.used else { return }
+        if 0...1000 ~= cpuUsage {
+            cpuLimit.onNext("\(cpuUsage) µs")
+        } else if 1001...1_000_000 ~= cpuUsage {
+            let ms = cpuUsage / 1000
+            cpuLimit.onNext(String(format: "%.2f", ms) + " ms")
+        } else {
+            let ms = cpuUsage / 1_000_000
+            cpuLimit.onNext(String(format: "%.2f", ms) + " s")
+        }
     }
 }
