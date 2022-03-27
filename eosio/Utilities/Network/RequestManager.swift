@@ -68,6 +68,7 @@ extension RequestManager: RequestManagerProtocol {
         
         var urlRequest = URLRequest(url: URL(string: baseApi + url)!, cachePolicy: .useProtocolCachePolicy, timeoutInterval: timeOutInterval)
         urlRequest.allHTTPHeaderFields = header
+        urlRequest.httpBody = httpMethod.paramData
         
         urlRequest.httpMethod = httpMethod.name
         
